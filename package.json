@@ -2,7 +2,7 @@
   "name": "--minimal",
   "type": "module",
   "version": "0.0.1",
-  "browserList" : [
+  "browserList": [
     "defaults"
   ],
   "scripts": {
@@ -12,8 +12,10 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@iconify-json/fe": "^1.2.2",
     "astro": "^5.3.1",
-    "astro-icon": "^1.1.5"
+    "astro-icon": "^1.1.5",
+    "svgo": "^3.3.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
