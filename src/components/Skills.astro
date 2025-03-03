@@ -1,0 +1,19 @@
+---
+import {Icon} from 'astro-icon/components'
+import skills from '../assets/skills.json'
+---
+
+<section class="skills container-sm">
+    <h2 class="sr-only">Services</h2>
+    {
+      skills.map(skill => (
+        <div class="skill">
+          <div>
+            <Icon name={skill.icon} class="skill-icon"/>
+          </div>
+          <h3>{skill.name}</h3>
+          <p class="text-text-alt">{skill.content}</p>
+        </div>
+      ))
+    }
+  </section>

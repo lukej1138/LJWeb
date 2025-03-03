@@ -1,0 +1,56 @@
+---
+import {Icon} from 'astro-icon/components'
+import projects from '../assets/projects.json'
+---
+
+<section class="projects-wrapper blur">
+  <h2 class="sr-only">Projects</h2>
+  <div class="projects-container container-xs">
+    <button class="project-btn grid-sm project-btn--prev" id="prev"
+    aria-label="Previous project">
+      <Icon name="ooui:previous-ltr" width="50" height="50"/>
+    </button>
+    <div class="projects">
+      {
+        projects.slice(projects.length-1).map((project) => (
+          <div class="project grid-sm">
+            <Icon name={`${project.icon}`} class="project--icon"/>
+            <p class="project--content">{project.content}</p>
+            <p class="project--name text-purple-gradient h3">{project.name}</p>
+          </div>
+        ))
+      }
+      {
+        projects.map((project) => (
+          <div class="project grid-sm">
+            <Icon name={`${project.icon}`} class="project--icon"/>
+            <p class="project--content">{project.content}</p>
+            <p class="project--name text-purple-gradient h3">{project.name}</p>
+          </div>
+        ))
+      }
+      {
+        projects.slice(0,1).map((project) => (
+          <div class="project grid-sm">
+            <Icon name={`${project.icon}`} class="project--icon"/>
+            <p class="project--content">{project.content}</p>
+            <p class="project--name text-purple-gradient h3">{project.name}</p>
+          </div>
+        ))
+      }
+    </div>
+    <div class="indicator-container">
+      {
+        projects.map((project) => (
+        <button class={`indicator ${project?.active ? "active" : ""}`}></button>
+        ))
+      }
+    </div>
+    <button class="project-btn grid-sm project-btn--next" id="next"
+    aria-label="Next project">
+      <Icon name="ooui:previous-rtl" width="50" height="50"/>
+    </button>
+  </div>
+  </section>
+  <script is:inline src="src/js/projects.js" type="module">
+  </script>

@@ -1,6 +1,7 @@
 ---
 import Navbar from '../components/Navbar.astro';
 const{title="Home"} = Astro.props;
+import '../styles/global.css'
 ---
 
 <!doctype html>
@@ -9,20 +10,21 @@ const{title="Home"} = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<title>{title}</title>
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
 		<style>
 			@import "../styles/global.css";
 		</style>
+		<meta name="generator" content={Astro.generator} />
 	</head>
 	<body>
-		<Navbar/>
-		<main>
-			<slot />
-		</main>
-		<footer class="blur">
-			<small>Copyright © <span id="copyrightYr"></span> Lucas Johnson</small>
-		</footer>
+		<div class="wrapper">
+			<Navbar/>
+			<main>
+				<slot />
+			</main>
+			<footer class="blur">
+				<small>Copyright © <span id="copyrightYr"></span> Lucas Johnson</small>
+			</footer>
+		</div>
 		<script>
 			const element = document.querySelector('#copyrightYr')
 			if(element){

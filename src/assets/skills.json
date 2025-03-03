@@ -1,0 +1,35 @@
+[
+    {
+        "icon": "devicon:java",
+        "name": "java",
+        "content": "Vel eget ruvestibulum mauris et ut hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim"
+    },
+    {
+        "icon": "devicon:python",
+        "name": "python",
+        "content": "Vel eget eu vestibulum mauris et ut hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim"
+    },
+
+    {
+        "icon": "devicon:cplusplus",
+        "name": "c++",
+        "content": "Vel eget eu vestibulum mauris et ut hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim"
+    },
+
+    {
+        "icon": "devicon:html5",
+        "name": "html",
+        "content": "fluent"
+    },
+
+    {
+        "icon": "devicon:css3",
+        "name": "css",
+        "content": "fluent"
+    },
+    {
+        "icon": "devicon:javascript",
+        "name": "javascript",
+        "content": "fluent"
+    }
+]

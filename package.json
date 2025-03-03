@@ -12,7 +12,13 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@iconify-json/devicon": "^1.2.17",
+    "@iconify-json/emojione": "^1.2.1",
     "@iconify-json/fe": "^1.2.2",
+    "@iconify-json/hugeicons": "^1.2.3",
+    "@iconify-json/ooui": "^1.2.6",
+    "@iconify-json/token-branded": "^1.2.15",
+    "@iconify/json": "^2.2.311",
     "astro": "^5.3.1",
     "astro-icon": "^1.1.5",
     "svgo": "^3.3.2"

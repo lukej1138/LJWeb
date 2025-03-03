@@ -1,0 +1,34 @@
+[
+    {
+        "icon": "emojione:recycling-symbol",
+        "name": "EcoVision",
+        "content": "Vel eget ruvestibulum mauris et ut hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim",
+        "active": true
+    },
+    {
+        "icon": "hugeicons:artificial-intelligence-01",
+        "name": "FitLife ML Predictive Model",
+        "content": "Vel eget eu vestibulum mauris et ut hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim"
+    },
+    {
+        "icon": "token-branded:0x0",
+        "name": "Generative Language Model",
+        "content": "Vel eget eu vestibulum mauris et ut hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim"
+    },
+    {
+        "icon": "red-black-tree",
+        "name": "Red-Black Tree",
+        "content": "Vel eget eu vestibulum mauris et ut hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim"
+    },
+
+    {
+        "icon": "token-branded:dweb",
+        "name": "This Website Lol",
+        "content": "Vel eget eu vestibulum mauris et ut hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim"
+    },
+    {
+        "icon": "image",
+        "name": "PawHacks",
+        "content": "Vel eget eu vestibulum mauris et ut hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim"
+    }
+]
