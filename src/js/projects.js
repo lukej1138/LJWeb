@@ -1,86 +1,82 @@
-const projectSlider = document.querySelector('.projects');
+const projectsSlider = document.querySelector('.projects');
 const projectBtns = document.querySelectorAll('.project-btn');
 const projects = [...document.querySelectorAll('.project')];
 const indicators = [...document.querySelectorAll('.indicator')];
-
 let isMoving;
 let currentIndex = 1;
 
 function showActiveIndicator(){
-    indicators.forEach(ind => ind.classList.remove('active'));
-    let activeIndicator;
-    if(currentIndex === 0 || currentIndex === projects.length-2)
-    {
-            activeIndicator = indicators.length-1;
-    }
-    else if(currentIndex === projects.length -1 || currentIndex === 1){
-        activeIndicator = 0;
-    } else {
-        activeIndicator = currentIndex -1;
-    }
-    indicators[activeIndicator].classList.add('active');
+  indicators.forEach(ind => ind.classList.remove('active'));
+  let activeIndicator;
+  if(currentIndex === 0 || currentIndex === projects.length - 2){
+    activeIndicator = indicators.length - 1;
+  } else if (currentIndex === projects.length - 1 || currentIndex === 1){
+    activeIndicator = 0;
+  } else {
+    activeIndicator = currentIndex - 1;
+  }
+  indicators[activeIndicator].classList.add('active');
 }
-
 
 function moveSlider(){
-    projectSlider.style.transform = `translateX(-${currentIndex * 100}%)`;
-    showActiveIndicator();
-}
+  projectsSlider.style.transform = `translateX(-${currentIndex * 100}%)`;
+  showActiveIndicator();
+};
 
-
-function handleProjectBtnClick(e){
-    if(isMoving){return};
-    isMoving=true;
-    e.currentTarget.id === 'next' 
-        ? currentIndex++ 
-        : currentIndex--;
-    moveSlider();
+function handleReviewBtnClick(e){
+  if(isMoving){ return };
+  isMoving = true;
+  e.currentTarget.id === 'next'
+    ? currentIndex++
+    : currentIndex--;
+  moveSlider();
 }
 
 function handleIndicatorClick(e){
-    if(isMoving){ return };
-    isMoving = true;
-    currentIndex = indicators.indexOf(e.target) + 1;
-    moveSlider();
-  }
-  
-  // Event Listeners
+  if(isMoving){ return };
+  isMoving = true;
+  currentIndex = indicators.indexOf(e.target) + 1;
+  moveSlider();
+}
+
+// Event Listeners
 projectBtns.forEach(btn => {
-    btn.addEventListener('click', handleProjectBtnClick);
+  btn.addEventListener('click', handleReviewBtnClick);
 })
-  
+
 indicators.forEach(ind => {
-    ind.addEventListener('click', handleIndicatorClick);
+  ind.addEventListener('click', handleIndicatorClick);
 })
-  
-projectSlider.addEventListener('transitionend', () => {
-    isMoving = false;
 
+projectsSlider.addEventListener('transitionend', () => {
     if (currentIndex === 0) {
+      setTimeout(() => {
+        projectsSlider.style.transition = 'none'; // Remove animation
         currentIndex = projects.length - 2;
-        projectSlider.style.transition = 'none';
         moveSlider();
-
-        // Restore transition after a frame
-        requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-                projectSlider.style.transition = 'transform 500ms ease';
-            });
-        });
-    } 
-    else if (currentIndex === projects.length - 1) {
-        // Jump to the first real slide instantly
-        currentIndex = 1;
-        projectSlider.style.transition = 'none'; // Disable animation
-
-        moveSlider(); // Move instantly
-
-        requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-                projectSlider.style.transition = 'transform 500ms ease';
-            });
-        });
-    } else {
-        projectSlider.style.transition = 'transform 500ms ease';
+        
+        setTimeout(() => {
+          projectsSlider.style.transition = 'transform 500ms ease-in-out';
+          isMoving = false;
+        }, 50);
+      }, 10);
+      return;
     }
-});
+  
+    if (currentIndex === projects.length - 1) {
+      setTimeout(() => {
+        projectsSlider.style.transition = 'none'; // Remove animation
+        currentIndex = 1;
+        moveSlider();
+  
+        setTimeout(() => {
+          projectsSlider.style.transition = 'transform 500ms ease-in-out';
+          isMoving = false;
+        }, 50);
+      }, 10);
+      return;
+    }
+  
+    isMoving = false;
+  });
+  

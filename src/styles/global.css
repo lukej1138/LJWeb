@@ -37,9 +37,12 @@ svg {
     );
 }
 
-@media(min-width: 768px){
+@media(min-width: 900px){
     html {
         font-size: 130%;
+    }
+    .wrapper{
+        overflow: hidden;
     }
 }
 
@@ -50,12 +53,11 @@ body {
     max-width: 2000px;
     margin: auto;
     background-color: hsl(var(--bkg));
-    color: hsl(var(--text))
+    color: hsl(var(--text));
 }
 
 /*Layout rn*/
 .wrapper {
-    overflow: hidden;
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
@@ -63,7 +65,7 @@ body {
 
 main {
     display: grid;
-    gap: var(--size-fluid-5);
+    gap: calc(var(--size-fluid-4) *1.15);
     padding: var(--size-fluid-5) var(--size-fluid-2);
 }
 
@@ -198,17 +200,53 @@ small{
     cursor: pointer;
 }
 
+
 .btn--primary {
+    color: hsl(var(--straight-white));
     background-color: hsl(var(--accent-1));
+    transition: background-color 150ms linear;
 }
+
+.btn--transparent:hover{
+    color: hsl(var(--text-alt));
+    transform: 100ms ease-in;
+}
+
+.btn--primary:hover{
+    background-color: hsl(var(--accent-pink));
+}
+
 
 .btn--secondary {
-    background: var(--standard-gradient);
-}
-.btn--muted {
-    background-color: hsl(var(--muted));
+    position: relative;
+    color: hsl(var(--straight-white));
+    background-image: var(--standard-gradient);
+    z-index: 1;
 }
 
+.btn--secondary::before {
+    position: absolute;
+    content: 'Check Them Out';
+    background-image: var(--purple-gradient);
+    padding: var(--size-2) var(--size-fluid-3);
+    opacity: 0;  /* Initially hidden */
+    z-index: 0; /* Ensure pseudo-element is below the button text */
+    transition: opacity 300ms linear, z-index 0s 0.5s; /* Smooth transition for opacity, and delayed z-index */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;  /* Or a specific width if necessary */
+    height: 100%; /* Or a specific height if necessary */
+}
+
+.btn--secondary:hover::before {
+    opacity: 1;  /* Make the pseudo-element visible on hover */
+    z-index: 1;  /* Ensure it appears above the button text */
+}
+
+.btn--secondary::before {
+    will-change: opacity, z-index;  /* Improve performance of the transition */
+}
 .btn--menu{
     background-color: transparent;
     border: none;
@@ -255,10 +293,19 @@ small{
 
 /* NAV */
 .nav-container{
+    box-shadow: 5px 5px black;
+    background-color: hsl(var(--bkg-alt) / 0.8);
+    z-index: 15;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--size-fluid-2);
+    position: fixed;
+    width: fit-content;
+    left: 50%; /* Centers it horizontally */
+    transform: translateX(-50%); /* Adjusts position so it's truly centered */
+    padding: 10px 20px;
+    margin: 1rem;
+    border-radius: 10px;
 }
 
 .nav-links,
@@ -272,7 +319,8 @@ small{
     flex-direction: column;
     transform: translateY(-200%);
     position: absolute;
-    background-color: hsl(var(--bkg));
+    background-color: hsl(var(--bkg-alt) / 0.8);
+    border-radius: 10px;
     top: var(--size-fluid-5);
     left: 0;
     right: 0;
@@ -290,7 +338,7 @@ li[role="none"],
 
 
 .name {
-    width: calc(var(--size-fluid-10) * 0.65);
+    width: calc(var(--size-fluid-9) * 0.65);
     height: auto;
 }
 
@@ -319,12 +367,13 @@ li[role="none"],
 }
 
 .front-photo{
-    width: var(--size-fluid-10);
-    border-radius: 40%;
+    width: calc(var(--size-fluid-9) * 1.1);
+    border-radius: 50%;
 }
 /* hero */
 header {
     text-align: center;
+    padding-top: 4rem;
 }
 /* Skills */
 .skill p{
@@ -349,7 +398,7 @@ header {
     height: auto;
     width: var(--size-fluid-5);
 }
-/*Reviews*/
+/*Projects*/
 .projects-wrapper{
     background-color: hsl(var(--bkg));
     margin: 0 calc(var(--size-fluid-2) * -1);
@@ -373,7 +422,7 @@ header {
     margin: var(--size-fluid-4) 0 var(--size-fluid-5);
     text-align: center;
     transform: translateX(-100%);
-    transition: transform 300ms ease-in-out;
+    transition: transform 500ms ease-in-out;
 }
 
 .project{
@@ -442,6 +491,50 @@ header {
 .indicator.active {
     background: hsl(var(--text-alt));
 }
+
+/* CurrProj */
+.currProject-wrapper{
+    background: var(--purple-gradient);
+    justify-content: center;
+    align-self: center;
+    margin: 0 var(--size-fluid-8);
+    padding: var(--size-fluid-3);
+    border-radius: 20px;
+    height: auto;
+    min-width: 250px;
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+}
+
+.currProject-img{
+    width: auto;
+    height: var(--size-fluid-7); 
+}
+
+.currProject-img-wrapper{
+    display: flex;
+    justify-content: center;
+    background-color: hsl(var(--text-alt));
+    border-radius: 50%;
+    padding: 2rem; /* Adds extra space */
+    background-color: aliceblue;
+}
+
+.currProject-content{
+    text-align: center;
+    font-size: var(--size-fluid-2);
+    font-weight: 600;
+    max-width: 90%;
+    overflow: hidden;
+    overflow-wrap: break-word;
+}
+
+.currProject-head{
+    font-size: var(--size-fluid-3);
+}
+
+
 /* footer */
 footer {
     display: grid;

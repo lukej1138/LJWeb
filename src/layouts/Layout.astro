@@ -16,12 +16,12 @@ import '../styles/global.css'
 		<meta name="generator" content={Astro.generator} />
 	</head>
 	<body>
-		<div class="wrapper">
+		<div class="wrapper" id="home">
 			<Navbar/>
 			<main>
 				<slot />
 			</main>
-			<footer class="blur">
+			<footer>
 				<small>Copyright © <span id="copyrightYr"></span> Lucas Johnson</small>
 			</footer>
 		</div>
