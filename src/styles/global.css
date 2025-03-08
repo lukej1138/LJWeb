@@ -65,7 +65,7 @@ body {
 
 main {
     display: grid;
-    gap: calc(var(--size-fluid-4) *1.15);
+    gap: calc(var(--size-fluid-5) * 0.8);
     padding: var(--size-fluid-5) var(--size-fluid-2);
 }
 
@@ -232,8 +232,9 @@ small{
     opacity: 0;  /* Initially hidden */
     z-index: 0; /* Ensure pseudo-element is below the button text */
     transition: opacity 300ms linear, z-index 0s 0.5s; /* Smooth transition for opacity, and delayed z-index */
-    top: 50%;
+    top: 50.5%;
     left: 50%;
+    border-radius: var(--radius-1);
     transform: translate(-50%, -50%);
     width: 100%;  /* Or a specific width if necessary */
     height: 100%; /* Or a specific height if necessary */
@@ -369,6 +370,7 @@ li[role="none"],
 .front-photo{
     width: calc(var(--size-fluid-9) * 1.1);
     border-radius: 50%;
+    padding-bottom: 1rem;
 }
 /* hero */
 header {
@@ -547,4 +549,51 @@ footer {
 footer::after,
 footer::before{
     height: 100px;
+}
+
+
+/* Animations */
+.animateOuter{
+    display: block;
+    overflow: hidden;
+
+}
+
+.animateInner{
+    animation: slideUp 1s linear;
+    display: block;
+}
+
+@keyframes slideUp {
+    0%{
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    40%{
+        opacity: 0.1;
+    }
+    60%{
+        opacity: 0.3;
+    }
+    80%{
+        opacity: 0.5;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    
+    }
+}
+
+
+.hidden {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Add this class when the element comes into view */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
