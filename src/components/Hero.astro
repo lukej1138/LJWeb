@@ -22,6 +22,95 @@ import backphotoright from '/public/backphoto-right-3.jpg';
     <img src={frontPhoto.src} class="front-photo hiddenY" alt="mainPhoto" aria-hidden="true"/>
 </section>
 
-<script is:inline src="/public/backphotos.js" type="module"/>
-<script is:inline src="/public/typeWrite.js" type="module"/>
-<script is:inline src="/public/slideInY.js" type="module"/>
+<script>
+    document.addEventListener("DOMContentLoaded", test)
+
+    async function test() {
+        const elements = document.querySelectorAll(".hiddenX");
+        const observer = new IntersectionObserver((entries, observer) =>{
+            entries.forEach(entry =>{
+                if(entry.isIntersecting) {
+                    entry.target.classList.remove("hiddenX");
+                    entry.target.classList.add("visibleX");
+                    observer.unobserve(entry.target);
+                }
+            }), {threshold: 0.2}
+        });
+        let delay = 0;
+        let i = 0
+        const staggerDelay = 700; // Adjust the delay (milliseconds) for the stagger effect
+
+        elements.forEach(element => {
+            if(i < 2){
+                setTimeout(() => {
+                    observer.observe(element);
+                }, delay);
+                delay += staggerDelay;
+                i++;
+            }
+            else{
+                observer.observe(element);
+            }
+        });
+    }
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll(".hiddenY");
+    const observer = new IntersectionObserver((entries, observer) =>{
+        entries.forEach(entry =>{
+            if(entry.isIntersecting) {
+                entry.target.classList.add("visibleY");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {threshold: 0.1});
+
+    let isFirst = true
+    const delay = 1300
+    elements.forEach(element => {
+        if(isFirst){
+            setTimeout(() => {
+                observer.observe(element)}, delay);
+            isFirst = false;
+        }
+        else{
+            observer.observe(element);
+        }
+    });     
+});
+</script>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+        typeWrite()
+    });
+
+
+    async function typeWrite() {
+        let i = 0;
+        var element = document.getElementById("heroType");
+        if(!element) return;
+        var text = element.textContent;
+        element.textContent = "";
+        element.innerHTML = '<span id="cursor">_</span>'
+        element.classList.remove("hidden");
+        if(!text) return;
+        while(i < text.length){
+            element.innerHTML = text.slice(0, i+1) + '<span id="cursor">_</span>';
+            i++
+            await pause(100);
+        }
+        blinkCursor()
+    }
+
+    function blinkCursor(){
+        const cursor = document.getElementById("cursor");
+        if(!cursor) return;
+        setInterval(() => {cursor.style.visibility = cursor.style.visibility === 'hidden' ? 'visible' : 'hidden'},
+        530);
+    }
+    function pause(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+</script>
