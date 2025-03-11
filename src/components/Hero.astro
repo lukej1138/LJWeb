@@ -1,8 +1,8 @@
 ---
 import Button from './Button.astro';
-import frontPhoto from '../assets/frontphoto.jpeg';
-import backphotoleft from '../assets/backphoto-left.jpg';
-import backphotoright from '../assets/backphoto-right-3.jpg';
+import frontPhoto from '/Users/lukejohnson/Documents/VsCode/LJWeb/public/frontphoto.jpeg';
+import backphotoleft from '/Users/lukejohnson/Documents/VsCode/LJWeb/public/backphoto-left.jpg';
+import backphotoright from '/Users/lukejohnson/Documents/VsCode/LJWeb/public/backphoto-right-3.jpg';
 ---
 <header class = "grid-lg">
     <div class = "grid-sm">
@@ -22,6 +22,6 @@ import backphotoright from '../assets/backphoto-right-3.jpg';
     <img src={frontPhoto.src} class="front-photo hiddenY" alt="mainPhoto" aria-hidden="true"/>
 </section>
 
-<script is:inline src="src/js/typeWrite.js" type="module"/>
-<script is:inline src="src/js/backphotos.js" type="module"/>
-<script is:inline src="src/js/slideInY.js" type="module"/>
+<script is:inline src="/Users/lukejohnson/Documents/VsCode/LJWeb/public/backphotos.js" type="module"/>
+<script is:inline src="/Users/lukejohnson/Documents/VsCode/LJWeb/public/typeWrite.js" type="module"/>
+<script is:inline src="/Users/lukejohnson/Documents/VsCode/LJWeb/public/slideInY.js" type="module"/>
