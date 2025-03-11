@@ -1,20 +1,22 @@
-
 ---
 import Button from './Button.astro'
 ---
 <header class = "grid-lg">
     <div class = "grid-sm">
-        <span class = "animateOuter">
-            <span class="animateInner">
-                <h1 class="h1 text-standard-gradient">Welcome To The Website :D</h1>
-            </span>
-        </span>
-        <p class="h3 text-text-alt narrow">
-            This Is Where I Keep My Cool Projects
-        </p>
+        <h1 class="h1 text-standard-gradient">The LJCoolJ Portfolio ;D</h1>
+        <p id="heroType" class="h3 text-text-alt narrow hidden">Welcome To My Slice Of The Internet <:)</p>
     </div>
     <div class = "grid-sm">
         <Button text="Check Them Out" link="#projects" style="secondary"/>
         <small class="text-text-alt">Trust Me, They're Super Cool</small>
     </div>
 </header>
+<section class="photos-container container blur grid-md">
+    <section class="back-photos">
+        <img src="src/assets/backphoto-left.jpg" class="back-photo hiddenX" data-direction="left" alt="mainPhoto" aria-hidden="true"/>
+        <img src="src/assets/backphoto-right-3.jpg" class="back-photo hiddenX" data-direction="right" alt="mainPhoto" aria-hidden="true"/>
+    </section>
+    <img src="src/assets/frontphoto.jpeg" class="front-photo hiddenY" alt="mainPhoto" aria-hidden="true"/>
+</section>
+
+<script is:inline src="src/js/typeWrite.js" type="module"></script>

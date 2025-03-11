@@ -9,7 +9,7 @@ import skills from '../assets/skills.json'
       skills.map(skill => (
         <div class="skill">
           <div>
-            <Icon name={skill.icon} class="skill-icon hidden"/>
+            <Icon name={skill.icon} class="skill-icon hiddenY"/>
           </div>
           <h3>{skill.name}</h3>
           <p class="text-text-alt">{skill.content}</p>
@@ -18,4 +18,4 @@ import skills from '../assets/skills.json'
     }
   </section>
 
-  <script is:inline src="src/js/animations.js" type="module"></script>
+  <script is:inline src="src/js/slideInY.js" type="module"></script>

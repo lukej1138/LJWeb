@@ -1,35 +1,35 @@
 [
     {
         "icon": "devicon:java",
-        "name": "java",
-        "content": "Vel eget ruvestibulum mauris et ut hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim"
+        "name": "java (fluent)",
+        "content": "I've taken multiple Java classes and made a variety of projects both in and out of a college."
     },
     {
         "icon": "devicon:python",
-        "name": "python",
-        "content": "Vel eget eu vestibulum mauris et ut hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim"
+        "name": "python (proficient)",
+        "content": "Python is the premier language for Machine Learning; I've spent more time on Pandas than I want to admit lol."
     },
 
     {
         "icon": "devicon:cplusplus",
-        "name": "c++",
-        "content": "Vel eget eu vestibulum mauris et ut hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim"
+        "name": "c++ (proficient)",
+        "content": "This is the first object-oriented language I learned, but it's been a little bit since I really practiced."
     },
 
     {
         "icon": "devicon:html5",
-        "name": "html",
-        "content": "fluent"
+        "name": "html (fluent)",
+        "content": "As a front-end developer among other things, I'm well-versed with HTML's ins-and-outs as the backbone of a website."
     },
 
     {
         "icon": "devicon:css3",
-        "name": "css",
-        "content": "fluent"
+        "name": "css (decent)",
+        "content": "Like HTML, my decent amount of web-dev experience has enabled me to navigate CSS with (relative) ease."
     },
     {
         "icon": "devicon:javascript",
-        "name": "javascript",
-        "content": "fluent"
+        "name": "javascript (noob)",
+        "content": "This is the newest language I've picked up. Hopefully you like some of the animations I added to this site :D."
     }
 ]

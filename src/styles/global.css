@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,700;1,14..32,700&display=swap');
-
 *,
 *::before,
 *::after {
@@ -22,6 +21,7 @@ svg {
     --text-alt: 222 35% 76%;
     --accent-1: 224 83% 58%;
     --accent-2: 222 35% 76%;
+    --accent-purple: 267 81% 60%;
     --accent-pink: 309 82% 59%;
     --accent-orange: 0 91% 71%;
     --straight-white: 228 100% 99%;
@@ -65,7 +65,7 @@ body {
 
 main {
     display: grid;
-    gap: calc(var(--size-fluid-5) * 0.8);
+    gap: calc(var(--size-fluid-5) * 0.75);
     padding: var(--size-fluid-5) var(--size-fluid-2);
 }
 
@@ -191,6 +191,10 @@ small{
     max-width: 80ch;
 }
 
+@media(max-width: 900px){
+    
+}
+
 /* Components n stuff */
 .btn {
     color: hsl(var(--straight-white));
@@ -302,7 +306,7 @@ small{
     align-items: center;
     position: fixed;
     width: fit-content;
-    left: 50%; /* Centers it horizontally */
+    left: 49%; /* Centers it horizontally */
     transform: translateX(-50%); /* Adjusts position so it's truly centered */
     padding: 10px 20px;
     margin: 1rem;
@@ -413,7 +417,7 @@ header {
 }
 
 .projects-container {
-   overflow: hidden;
+    overflow: hidden;
     position: relative;
     width: calc(100vw - var(--size-fluid-2));
     background-color: hsl(var(--bkg));
@@ -425,6 +429,11 @@ header {
     text-align: center;
     transform: translateX(-100%);
     transition: transform 500ms ease-in-out;
+}
+
+#projects.projects-wrapper{
+    padding-top: 1rem;
+    text-align: center;
 }
 
 .project{
@@ -553,47 +562,117 @@ footer::before{
 
 
 /* Animations */
-.animateOuter{
-    display: block;
-    overflow: hidden;
-
-}
-
-.animateInner{
-    animation: slideUp 1s linear;
-    display: block;
-}
-
-@keyframes slideUp {
-    0%{
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    40%{
-        opacity: 0.1;
-    }
-    60%{
-        opacity: 0.3;
-    }
-    80%{
-        opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    
-    }
-}
-
-
-.hidden {
+.hiddenY {
     opacity: 0;
-    transform: translateY(100%);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transform: translateY(90%);
+    transition: opacity 0.8s, transform 0.8s;
 }
 
-/* Add this class when the element comes into view */
-.visible {
+.visibleY {
     opacity: 1;
     transform: translateY(0);
+}
+
+.hiddenX[data-direction="left"] {
+    opacity: 0;
+    transform: translateX(-100%); /* Start off-screen to the left */
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.hiddenX[data-direction="right"] {
+    opacity: 0;
+    transform: translateX(100%); /* Start off-screen to the left */
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.visibleX{
+    opacity: 1;
+    transform: translateX(0%); /* Move to its original position */
+    transition: opacity 0.5s, transform 0.5s; /*Ensure transition is here too*/
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+/*Contact CSS*/
+.contact-container{
+    row-gap: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-top{
+    gap: 10px;
+    display: flex;
+    width: 31rem;
+    height: 35px;
+}
+
+.contact-bottom{
+    width: 31.005rem;
+}
+
+.contact-item{
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding-left: 10px;
+    color: hsl(var(--accent-orange));
+    background-color: aliceblue;
+    font-size: var(--font-size-0);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+.contact-item::placeholder{
+    color: hsl(var(--accent-orange));
+    font-size: var(--font-size-0);
+    font-weight: 600;
+}
+
+.contact-item:focus{
+    outline: 2px solid hsl(var(--accent-orange));
+}
+
+.contact-item-top{
+    height: 100%;
+}
+
+.contact-item-bottom{
+    padding-top: 10px;
+    height: 200px;
+}
+
+.contact-btn{
+    outline: none;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    border-radius: 50px;
+}
+.contact-header{
+    color: hsl(var(--accent-orange));
+}
+
+/*photos*/
+.front-photo{
+    position: absolute;
+    width: calc(var(--size-fluid-9) * 1.1);
+    border-radius: 50%;
+    padding-bottom: 1rem;
+
+}
+
+.back-photo{
+    width: calc(var(--size-fluid-9) * 1.1);
+    border-radius: 50%;
+    padding-bottom: 1rem;
+}
+
+.back-photos{
+    display: flex;
+    gap: calc(var(--size-10) * 2);
 }
