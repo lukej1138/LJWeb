@@ -11,7 +11,7 @@ export default defineConfig({
         },
         build: {
             rollupOptions: {
-                external: ["/Users/lukejohnson/Documents/VsCode/LJWeb/public/frontphoto.jpeg"],
+                external: ["/Users/lukejohnson/Documents/VsCode/LJWeb/public/frontphoto.jpeg", "/Users/lukejohnson/Documents/VsCode/LJWeb/public/backphoto-left.jpeg", "/Users/lukejohnson/Documents/VsCode/LJWeb/public/backphoto-right-3.jpeg"],
             },
         },
     },
