@@ -9,5 +9,10 @@ export default defineConfig({
         ssr: {
             external: ["svgo"],
         },
+        build: {
+            rollupOptions: {
+                external: ["/assets/frontphoto.jpeg"],
+            },
+        },
     },
 });
