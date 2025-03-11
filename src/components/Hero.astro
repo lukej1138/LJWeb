@@ -1,5 +1,8 @@
 ---
-import Button from './Button.astro'
+import Button from './Button.astro';
+import frontPhoto from '../assets/frontphoto.jpeg';
+import backphotoleft from '../assets/backphoto-left.jpg';
+import backphotoright from '../assets/backphoto-right-3.jpg';
 ---
 <header class = "grid-lg">
     <div class = "grid-sm">
@@ -13,10 +16,12 @@ import Button from './Button.astro'
 </header>
 <section class="photos-container container blur grid-md">
     <section class="back-photos">
-        <img src="src/assets/backphoto-left.jpg" class="back-photo" data-direction="left" alt="mainPhoto" aria-hidden="true"/>
-        <img src="src/assets/backphoto-right-3.jpg" class="back-photo" data-direction="right" alt="mainPhoto" aria-hidden="true"/>
+        <img src={backphotoleft.src} class="back-photo hiddenX" data-direction="left" alt="mainPhoto" aria-hidden="true"/>
+        <img src={backphotoright.src} class="back-photo hiddenX" data-direction="right" alt="mainPhoto" aria-hidden="true"/>
     </section>
-    <img src="src/assets/frontphoto.jpeg" class="front-photo hiddenY" alt="mainPhoto" aria-hidden="true"/>
+    <img src={frontPhoto.src} class="front-photo hiddenY" alt="mainPhoto" aria-hidden="true"/>
 </section>
 
-<script is:inline src="src/js/typeWrite.js" type="module"></script>
+<script is:inline src="src/js/typeWrite.js" type="module"/>
+<script is:inline src="src/js/backphotos.js" type="module"/>
+<script is:inline src="src/js/slideInY.js" type="module"/>
