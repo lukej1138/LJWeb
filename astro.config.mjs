@@ -11,7 +11,7 @@ export default defineConfig({
         },
         build: {
             rollupOptions: {
-                external: ["/frontphoto.jpeg", "/backphoto-left.jpg", "/backphoto-right-3.jpg"],
+                external: ["/frontphoto.jpeg", "/backphoto-left.jpg", "/backphoto-right-3.jpg", "/chess.3757adde.svg"],
             },
         },
     },
