@@ -508,11 +508,11 @@ header {
     background: var(--purple-gradient);
     justify-content: center;
     align-self: center;
-    margin: 0 var(--size-fluid-8);
+    margin: 0 var(--size-fluid-4);
     padding: var(--size-fluid-3);
     border-radius: 20px;
     height: auto;
-    min-width: 250px;
+    min-width: 500px;
     display: grid;
     place-items: center;
     gap: 1rem;
@@ -674,5 +674,6 @@ footer::before{
 
 .back-photos{
     display: flex;
-    gap: calc(var(--size-fluid-6));
+    justify-content: calc(center);
+    gap: calc(var(--size-fluid-5));
 }
