@@ -670,6 +670,7 @@ footer::before{
     width: calc(var(--size-fluid-9) * 1.1);
     border-radius: 50%;
     padding-bottom: 1rem;
+    overflow: hidden;
 }
 
 .back-photos{
