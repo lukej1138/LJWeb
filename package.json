@@ -28,6 +28,7 @@
     "tailwindcss": "^4.0.12"
   },
   "devDependencies": {
+    "astro-compressor": "1.0.0",
     "autoprefixer": "^10.4.20",
     "open-props": "^1.7.13",
     "postcss": "^8.5.3",

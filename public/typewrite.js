@@ -6,11 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
 async function typeWrite() {
     let i = 0;
     var element = document.getElementById("heroType");
+    var text = "Welcome To My Slice Of The Internet <:)";
     if(!element) return;
-    var text = element.textContent;
-    element.textContent = "";
     element.innerHTML = '<span id="cursor">_</span>'
-    element.classList.remove("hidden");
     while(i < text.length){
         element.innerHTML = text.slice(0, i+1) + '<span id="cursor">_</span>';
         i++
