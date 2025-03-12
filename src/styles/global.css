@@ -674,6 +674,6 @@ footer::before{
 
 .back-photos{
     display: flex;
-    justify-content: calc(center);
+    justify-content: calc(center+1rem);
     gap: calc(var(--size-fluid-5));
 }
