@@ -581,7 +581,6 @@ footer::before{
 
 .hiddenX[data-direction="right"] {
     opacity: 0;
-    overflow: hidden;
     transform: translateX(100%); /* Start off-screen to the left */
     transition: opacity 0.5s, transform 0.5s;
 }
@@ -676,4 +675,5 @@ footer::before{
 .back-photos{
     display: flex;
     gap: calc(var(--size-fluid-6));
+    overflow: hidden;
 }
