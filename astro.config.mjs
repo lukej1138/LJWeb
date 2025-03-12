@@ -9,10 +9,5 @@ export default defineConfig({
         ssr: {
             external: ["svgo"],
         },
-        build: {
-            rollupOptions: {
-                external: ["/frontphoto.jpeg", "/backphoto-left.jpg", "/backphoto-right-3.jpg", "/chess.3757adde.svg"],
-            },
-        },
     },
 });
