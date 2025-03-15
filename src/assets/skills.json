@@ -2,7 +2,7 @@
     {
         "icon": "devicon:java",
         "name": "java (fluent)",
-        "content": "I've taken multiple Java classes and made a variety of projects both in and out of a college."
+        "content": "I've taken multiple Java classes and made a variety of projects both in and out of the classroom."
     },
     {
         "icon": "devicon:python",
@@ -12,8 +12,8 @@
 
     {
         "icon": "devicon:cplusplus",
-        "name": "c++ (proficient)",
-        "content": "This is the first object-oriented language I learned, but it's been a little bit since I really practiced."
+        "name": "c++ (fluent)",
+        "content": "This is the first object-oriented language I learned, and is where I've developed the majority of my projects."
     },
 
     {
@@ -24,12 +24,12 @@
 
     {
         "icon": "devicon:css3",
-        "name": "css (decent)",
+        "name": "css (proficient)",
         "content": "Like HTML, my decent amount of web-dev experience has enabled me to navigate CSS with (relative) ease."
     },
     {
         "icon": "devicon:javascript",
-        "name": "javascript (noob)",
+        "name": "javascript (decent)",
         "content": "This is the newest language I've picked up. Hopefully you like some of the animations I added to this site :D."
     }
 ]
