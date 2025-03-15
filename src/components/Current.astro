@@ -1,14 +1,14 @@
 ---
 import {Icon} from 'astro-icon/components'
 const myIcon = "@icons/chess.3757adde";
-const content = "Currently working on the development of a platform to play chess, where I'll eventually develop an AI-opponent for users with different levels of difficulty."
+const content = "Currently I'm working on a personal AI assistant. Right now I'm trying to incorporate Natural Language Processing and Google Calendar API for easy schedule upkeep."
 import chessImage from '/public/chess.3757adde.svg';
 ---
 
 <section id="current" class="blur currProject-wrapper container-md">
     <h3 class="currProject-head text-straight-white">What's Going On Right Now?</h3>
     <div class="currProject-img-wrapper hiddenX" data-direction="left">
-        <img src={chessImage.src} alt="Chess Icon" class="currProject-img hiddenY"/>
+        <Icon name="healthicons:artificial-intelligence-outline" class="currProject-img hiddenY"/>
     </div>
     <p class="currProject-content text-straight-white narrow">{content}</p>
 </section>
