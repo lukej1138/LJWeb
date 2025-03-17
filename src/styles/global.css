@@ -413,7 +413,7 @@ header {
 .projects-container {
     overflow: hidden;
     position: relative;
-    width: calc(100vw - var(--size-fluid-2));
+    width: calc(100vw - var(--size-fluid-4));
     background-color: hsl(var(--bkg));
 }
 
