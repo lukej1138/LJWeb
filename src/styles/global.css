@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,700;1,14..32,700&display=swap');
 *,
 *::before,
@@ -233,15 +232,15 @@ small{
     content: 'Check Them Out';
     background-image: var(--purple-gradient);
     padding: var(--size-2) var(--size-fluid-3);
-    opacity: 0;  /* Initially hidden */
-    z-index: 0; /* Ensure pseudo-element is below the button text */
-    transition: opacity 300ms linear, z-index 0s 0.5s; /* Smooth transition for opacity, and delayed z-index */
-    top: 50.5%;
+    opacity: 0; 
+    z-index: 0; 
+    transition: opacity 300ms linear, z-index 0s 0.5s; 
+    top: 50%;
     left: 50%;
     border-radius: var(--radius-1);
     transform: translate(-50%, -50%);
-    width: 100%;  /* Or a specific width if necessary */
-    height: 100%; /* Or a specific height if necessary */
+    width: 100%;
+    height: 100%; 
 }
 
 .btn--secondary:hover::before {
@@ -523,7 +522,7 @@ header {
     justify-content: center;
     background-color: hsl(var(--text-alt));
     border-radius: 50%;
-    padding: 2rem; /* Adds extra space */
+    padding: 2rem;
     background-color: aliceblue;
 }
 
@@ -570,20 +569,20 @@ footer::before{
 
 .hiddenX[data-direction="left"] {
     opacity: 0;
-    transform: translateX(-100%); /* Start off-screen to the left */
+    transform: translateX(-100%); 
     transition: opacity 0.5s, transform 0.5s;
 }
 
 .hiddenX[data-direction="right"] {
     opacity: 0;
-    transform: translateX(-200%); /* Start off-screen to the left */
+    transform: translateX(-200%); 
     transition: opacity 0.5s, transform 0.5s;
 }
 
 .visibleX{
     opacity: 1;
-    transform: translateX(0%); /* Move to its original position */
-    transition: opacity 0.5s, transform 0.5s; /*Ensure transition is here too*/
+    transform: translateX(0%); 
+    transition: opacity 0.5s, transform 0.5s; 
 }
 
 .hidden{
@@ -648,6 +647,7 @@ footer::before{
     font-weight: 600;
     border-radius: 50px;
 }
+
 .contact-header{
     color: hsl(var(--accent-orange));
 }
