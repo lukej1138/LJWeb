@@ -676,3 +676,21 @@ footer::before{
     display: flex;
     gap: calc(var(--size-fluid-4));
 }
+
+.socials-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: var(--size-fluid-4);
+}
+
+.social-icon{
+    width: var(--size-8);
+    height: auto;
+    color: hsl(var(--accent-1));
+    transition: transform ease 0.5s;
+}
+
+.social-icon:hover{
+    color: hsl(var(--accent-2));
+    transform: translate(0, -10px);
+}
