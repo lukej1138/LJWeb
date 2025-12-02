@@ -7,25 +7,25 @@
     {
         "icon": "devicon:python",
         "name": "Python (fluent)",
-        "content": "Python is the premier language for Machine Learning; I've spent more time on NumPy than I want to admit lol."
+        "content": "Python is the premier language for Machine Learning; I've spent more time on NumPy than I want to admit."
     },
 
     {
         "icon": "devicon:cplusplus",
         "name": "C++ (fluent)",
-        "content": "This is the first object-oriented language I learned, and is where I've developed the majority of my projects."
+        "content": "This is the first object-oriented language I learned, and is where I've developed a large portion of my projects."
     },
 
     {
         "icon": "devicon:typescript",
         "name": "Typescript (proficient)",
-        "content": "Full-stack web development has led me to become increasingly proficient in typescript, which serves as an amazing object-oriented version of javascript."
+        "content": "Full-stack web development has led me to become increasingly proficient in Typescript, which serves as an amazing object-oriented version of Javascript."
     },
 
     {
         "icon": "devicon:docker",
         "name": "Docker (proficient)",
-        "content": "As I've worked on more advanced, team-oriented projects, learning docker has become imperative, and is a skill I continue to hone."
+        "content": "As I've worked on more advanced, team-oriented projects, learning Docker has become imperative, and is a skill I continue to hone."
     },
     {
         "icon": "devicon:javascript",

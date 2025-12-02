@@ -6,22 +6,14 @@ document.addEventListener('DOMContentLoaded', function() {
 async function typeWrite() {
     let i = 0;
     var element = document.getElementById("heroText");
-    var text = element.innerHTML;
+    var text = [...new Intl.Segmenter().segment(element.innerHTML)].map(x => x.segment);
+    console.log(text)
     element.innerHTML = "";
     element.classList.remove("hidden");
     if(!element) return;
     while(i < text.length){
-        if (text[i] == "&") {
-            const semiColon = text.indexOf(";")
-            if (semiColon !== -1){
-                i = semiColon
-            } else {
-                i++
-            }
-        } else {
-            i++
-        }
-        element.innerHTML = text.slice(0, i);
+        element.innerHTML += text[i];
+        i++;
         await pause(100);
     }
     blinkCursor()

@@ -28,7 +28,7 @@
     },
     {
         "icon": "token-branded:dweb",
-        "name": "This Website Lol",
+        "name": "My Portfolio Website",
         "content": "Designed and deployed a responsive portfolio website using Astro framework, translating a Figma design into functional CSS, JavaScript, and HTML."
     }
 ]
