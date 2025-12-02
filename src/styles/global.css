@@ -229,7 +229,7 @@ small{
 
 .btn--secondary::before {
     position: absolute;
-    content: 'Check Them Out';
+    content: 'Check Out My Work';
     background-image: var(--purple-gradient);
     padding: var(--size-2) var(--size-fluid-3);
     opacity: 0; 
@@ -244,12 +244,12 @@ small{
 }
 
 .btn--secondary:hover::before {
-    opacity: 1;  /* Make the pseudo-element visible on hover */
-    z-index: 1;  /* Ensure it appears above the button text */
+    opacity: 1; 
+    z-index: 1;
 }
 
 .btn--secondary::before {
-    will-change: opacity, z-index;  /* Improve performance of the transition */
+    will-change: opacity, z-index;
 }
 .btn--menu{
     background-color: transparent;
@@ -299,7 +299,7 @@ small{
     align-items: center;
     position: fixed;
     width: fit-content;
-    left: 49%; /* Centers it horizontally */
+    left: 49%;
     transform: translateX(-50%); /* Adjusts position so it's truly centered */
     padding: 10px 20px;
     margin: 1rem;
