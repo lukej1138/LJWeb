@@ -272,9 +272,10 @@ small{
     content: '';
     position: absolute;
     z-index: -1;
-    filter: blur(35px);
+    filter: blur(120px);
     inset: 0;
     border-radius: 50% 50% 50%;
+    will-change: transform, filter;
 }
 
 .blur::after{
@@ -285,13 +286,6 @@ small{
 .blur::before{
     background-color: hsl(var(--accent-pink) / 0.3);
     transform: rotate(20deg);
-}
-
-@media (min-width:768px) {
-    .blur::after,
-    .blur::before {
-        filter: blur(120px);
-    }
 }
 
 
@@ -512,7 +506,6 @@ header {
 }
 
 .currProject-img{
-    color: hsl(var(--accent-1));
     width: auto;
     height: var(--size-fluid-8); 
 }
@@ -522,7 +515,7 @@ header {
     justify-content: center;
     background-color: hsl(var(--text-alt));
     border-radius: 50%;
-    padding: 2rem;
+    padding: 3rem;
     background-color: aliceblue;
 }
 
@@ -693,4 +686,13 @@ footer::before{
 .social-icon:hover{
     color: hsl(var(--accent-2));
     transform: translate(0, -10px);
+}
+
+.searchLink:link, .searchLink:visited {
+    color: #86d9ff;
+    transition: color 100ms ease-in;
+}
+
+.searchLink:hover {
+    color: hsl(var(--accent-purple));
 }

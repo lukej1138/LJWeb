@@ -1,9 +1,25 @@
 [
+    
+    {
+        "icon": "token-branded:0x0",
+        "name": "Personal AI Assistant (Jarvis Mk3)",
+        "content": "Developed a virtual AI Assistant with real-time speech processing using the Google Speech Recognition framework, enabling seamless user interaction. (Based on the Avenger's Jarvis)",
+        "active": true
+    },
+    {
+        "icon": "devicon:d3js",
+        "name": "Data Visualization Research",
+        "content": "Built a reactive, web-based data-visualization prototype using D3.js within ObservableHQ; ingested, cleaned, and aggregated bibliometric data to identify and rank “most relevant authors” within the IEEE VIS dataset."
+    },
+    {
+        "icon": "image",
+        "name": "PawHacks",
+        "content": "Collaborated with a team of four to develop the official website for PawHacks, the first student-led hackathon at Northeastern University’s Oakland campus, using HTML, Tailwind CSS, and JS."
+    },
     {
         "icon": "emojione:recycling-symbol",
         "name": "EcoVision",
-        "content": "Built a platform with Python, HTML, and FLask that translates demographic data into actionable climate risk insights using a predictive ML model and OpenAI’s API; was responsible for overseeing front-end development.",
-        "active": true
+        "content": "Built a platform with Python, HTML, and FLask that translates demographic data into actionable climate risk insights using a predictive ML model and OpenAI’s API; was responsible for overseeing front-end development."
     },
     {
         "icon": "hugeicons:artificial-intelligence-01",
@@ -11,24 +27,8 @@
         "content": "Trained a fitness-level machine-learning prediction model in Python using a random forest regressor, analyzing key features such as activity type, intensity, duration, and calories burned. Achieved a Mean Absolute Error of 2.83 in predicting fitness scores on a 0–21 scale."
     },
     {
-        "icon": "token-branded:0x0",
-        "name": "Generative Language Model",
-        "content": "Engineered a character N-gram language model in Java, implementing probabilistic text generation via HashMap-based frequency analysis and cumulative distribution sampling."
-    },
-    {
-        "icon": "red-black-tree",
-        "name": "Red-Black Tree",
-        "content": "Created a Red-Black Tree data structure in C++ for dynamic data sets via node pointers, prioritizing runtime efficiency for memory overhead."
-    },
-
-    {
         "icon": "token-branded:dweb",
         "name": "This Website Lol",
         "content": "Designed and deployed a responsive portfolio website using Astro framework, translating a Figma design into functional CSS, JavaScript, and HTML."
-    },
-    {
-        "icon": "image",
-        "name": "PawHacks",
-        "content": "Collaborated with a team of four to develop the official website for PawHacks, the first student-led hackathon at Northeastern University’s Oakland campus, using HTML, Tailwind CSS, and JS."
     }
 ]

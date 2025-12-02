@@ -1,35 +1,35 @@
 [
     {
         "icon": "devicon:java",
-        "name": "java (fluent)",
+        "name": "Java (fluent)",
         "content": "I've taken multiple Java classes and made a variety of projects both in and out of the classroom."
     },
     {
         "icon": "devicon:python",
-        "name": "python (proficient)",
-        "content": "Python is the premier language for Machine Learning; I've spent more time on Pandas than I want to admit lol."
+        "name": "Python (fluent)",
+        "content": "Python is the premier language for Machine Learning; I've spent more time on NumPy than I want to admit lol."
     },
 
     {
         "icon": "devicon:cplusplus",
-        "name": "c++ (fluent)",
+        "name": "C++ (fluent)",
         "content": "This is the first object-oriented language I learned, and is where I've developed the majority of my projects."
     },
 
     {
-        "icon": "devicon:html5",
-        "name": "html (fluent)",
-        "content": "As a front-end developer among other things, I'm well-versed with HTML's ins-and-outs as the backbone of a website."
+        "icon": "devicon:typescript",
+        "name": "Typescript (proficient)",
+        "content": "Full-stack web development has led me to become increasingly proficient in typescript, which serves as an amazing object-oriented version of javascript."
     },
 
     {
-        "icon": "devicon:css3",
-        "name": "css (proficient)",
-        "content": "Like HTML, my decent amount of web-dev experience has enabled me to navigate CSS with (relative) ease."
+        "icon": "devicon:docker",
+        "name": "Docker (proficient)",
+        "content": "As I've worked on more advanced, team-oriented projects, learning docker has become imperative, and is a skill I continue to hone."
     },
     {
         "icon": "devicon:javascript",
-        "name": "javascript (decent)",
-        "content": "This is the newest language I've picked up. Hopefully you like some of the animations I added to this site :D."
+        "name": "Javascript (proficient)",
+        "content": "One of the newer languages I've picked up, via projects like this website and variety of other forms of data visualization (see below)."
     }
 ]
