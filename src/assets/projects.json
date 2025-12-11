@@ -19,7 +19,7 @@
     {
         "icon": "emojione:recycling-symbol",
         "name": "EcoVision",
-        "content": "Built a platform with Python, HTML, and FLask that translates demographic data into actionable climate risk insights using a predictive ML model and OpenAI’s API; was responsible for overseeing front-end development."
+        "content": "Built a platform with Python, HTML, and Flask that translates demographic data into actionable climate risk insights using a predictive ML model and OpenAI’s API; was responsible for overseeing front-end development."
     },
     {
         "icon": "hugeicons:artificial-intelligence-01",
