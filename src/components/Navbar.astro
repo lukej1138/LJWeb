@@ -64,7 +64,6 @@ const navLinks = [
 
             if (targetElement) {
                 const navbarHeight = document.querySelector(".nav-container").getBoundingClientRect().height;
-                console.log(navbarHeight);
                 const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - 2*navbarHeight;
 
                 window.scrollTo({

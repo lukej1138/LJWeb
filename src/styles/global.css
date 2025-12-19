@@ -18,21 +18,23 @@ svg {
     --bkg-alt: 225 58.3% 18.8%;
     --text: 226 100% 94%;
     --text-alt: 222 35% 76%;
-    --accent-1: 224 83% 58%;
+    --accent-1: 206 100% 50%;
     --accent-2: 222 35% 76%;
     --accent-purple: 267 81% 60%;
-    --accent-pink: 309 82% 59%;
+    --accent-blue: 205 100% 81%; 
+    --accent-pink: 0 0% 96%;
     --accent-orange: 0 91% 71%;
+    --accent-purple: 267 68% 69%;
     --straight-white: 228 100% 99%;
     --standard-gradient: linear-gradient(
         94.55deg,
-        hsl(335 81% 60%),
-        hsl(var(--accent-orange))
+        hsl(206 100% 50%)
     );
-    --purple-gradient: linear-gradient(
+
+    --standard-gradient-full: linear-gradient(
         94.55deg,
-        hsl(267 81% 60%),
-        hsl(var(--accent-orange))
+        hsl(206, 100%, 50%),
+        hsl(205, 100%, 81%)
     );
 }
 
@@ -216,7 +218,8 @@ small{
 }
 
 .btn--primary:hover{
-    background-color: hsl(var(--accent-pink));
+    color: hsl(var(--accent-1));
+    background-color: hsl(205, 100%, 81%);
 }
 
 
@@ -230,7 +233,7 @@ small{
 .btn--secondary::before {
     position: absolute;
     content: 'Check Out My Work';
-    background-image: var(--purple-gradient);
+    background-image: var(--standard-gradient-full);
     padding: var(--size-2) var(--size-fluid-3);
     opacity: 0; 
     z-index: 0; 
@@ -267,26 +270,20 @@ small{
     position: relative;
 }
 
-.blur::after,
 .blur::before{
     content: '';
     position: absolute;
     z-index: -1;
-    filter: blur(120px);
+    filter: blur(250px);
     inset: 0;
     border-radius: 50% 50% 50%;
     will-change: transform, filter;
 }
 
-.blur::after{
+.blur::before{
     background-color: hsl(var(--accent-1) / 0.3);
-    transform: rotate(-20deg);
 }
 
-.blur::before{
-    background-color: hsl(var(--accent-pink) / 0.3);
-    transform: rotate(20deg);
-}
 
 
 /* NAV */
@@ -492,7 +489,7 @@ header {
 
 /* CurrProj */
 .currProject-wrapper{
-    background: var(--purple-gradient);
+    background: var(--standard-gradient);
     justify-content: center;
     align-self: center;
     margin: 0 var(--size-fluid-4);
@@ -608,20 +605,20 @@ footer::before{
     outline: none;
     width: 100%;
     padding-left: 10px;
-    color: hsl(var(--accent-orange));
+    color: hsl(var(--accent-1));
     background-color: aliceblue;
     font-size: var(--font-size-0);
     font-family: 'Inter', sans-serif;
     font-weight: 600;
 }
 .contact-item::placeholder{
-    color: hsl(var(--accent-orange));
+    color: hsl(var(--accent-1));
     font-size: var(--font-size-0);
     font-weight: 600;
 }
 
 .contact-item:focus{
-    outline: 2px solid hsl(var(--accent-orange));
+    outline: 2px solid hsl(var(--accent-1));
 }
 
 .contact-item-top{
@@ -642,7 +639,7 @@ footer::before{
 }
 
 .contact-header{
-    color: hsl(var(--accent-orange));
+    color: aliceblue;
 }
 
 /*photos*/
@@ -684,15 +681,15 @@ footer::before{
 }
 
 .social-icon:hover{
-    color: hsl(var(--accent-2));
+    color: hsl(var(--accent-blue));
     transform: translate(0, -10px);
 }
 
 .searchLink:link, .searchLink:visited {
-    color: #86d9ff;
+    color: aliceblue;
     transition: color 100ms ease-in;
 }
 
 .searchLink:hover {
-    color: hsl(var(--accent-purple));
+    color: hsl(var(--accent-blue));
 }
